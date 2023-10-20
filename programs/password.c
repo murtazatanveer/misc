@@ -15,7 +15,7 @@ if(g==pass){
 }
 
 else{
-   printf("\nn\nINCORRECT PASSWORD TRY AGAIN\n");
+   printf("\n\nINCORRECT PASSWORD TRY AGAIN\n");
 }
 
 
