@@ -1,8 +1,13 @@
 #include<stdio.h>
+//program of calculator using functions
 
+int addition(int a,int b);
+int sub(int e,int f);
+int mul(int h,int i);
+float div(float k, float l);
 
-int sca(){
-
+int main(){
+printf("calculator menu\n\n");
 printf("Addition      (1)\n");
 printf("Subtraction   (2)\n");
 printf("Multiplication(3)\n");
@@ -10,91 +15,104 @@ printf("Division      (4)\n");
 
 int choice;
 printf("\nEnter Choice : ");
+scanf("%d",&choice);
 
-if (choice==1){
+if(choice==1){
 
-int a;
+int aa,bb;
 
-printf("\nEnter 1st Number : ");
-scanf("%d",&a);
+printf("\nenter 1st number : ");
+scanf("%d",&aa);
 
-int b;
+printf("\n\nenter 2nd number : ");
+scanf("%d",&bb);
 
-printf("\nEnter 2nd Number : ");
-scanf("%d",&b);
-
-int c=a+b;
-
-return c;
+int w = addition(aa,bb);
+printf("\n\n%d + %d = %d",aa,bb,w);
 
 }
 
+else if(choice==2){
 
-else if (choice==2){
+int ee,ff;
 
-int d;
+printf("\nenter 1st number : ");
+scanf("%d",&ee);
 
-printf("\nEnter 1st Number : ");
-scanf("%d",&d);
+printf("\n\nenter 2nd number : ");
+scanf("%d",&ff);
 
-int e;
+int x = sub(ee,ff);
 
-printf("\nEnter 2nd Number : ");
-scanf("%d",&e);
-
-int f=d-e;
-
-return f;
-
-}
-
-
-
-else if (choice==3){
-
-int g;
-
-printf("\nEnter 1st Number : ");
-scanf("%d",&g);
-
-int h;
-
-printf("\nEnter 2nd Number : ");
-scanf("%d",&h);
-
-int i=g-h;
-
-return i;
-
-}
-
-
-else if (choice==4){
-
-int j;
-
-printf("\nEnter 1st Number : ");
-scanf("%d",&j);
-
-int k;
-
-printf("\nEnter 2nd Number : ");
-scanf("%d",&k);
-
-int l=j/k;
-
-return l;
-
-}
+printf("\n\n%d - %d = %d",ee,ff,x);
 
 
 
 }
 
-int main () {
+else if(choice==3){
 
-int z=sca();
+int hh,ii;
 
-printf("\n\nAnswer : %d\n",z);
+printf("\nenter 1st number : ");
+scanf("%d",&hh);
+
+printf("\n\nenter 2nd number : ");
+scanf("%d",&ii);
+
+int y = mul(hh,ii);
+
+printf("\n\n%d * %d = %d",hh,ii,y);
+
+
+}
+
+else if(choice==4){
+
+float kk,ll;
+
+printf("\nenter 1st number : ");
+scanf("%d",&kk);
+
+printf("\n\nenter 2nd number : ");
+scanf("%d",&ll);
+
+float z = div(kk,ll);
+
+printf("\n\n%.2f / %.2f = %.2f",kk,ll,z);
+
+
+}
+
+else{
+    printf("\n\nInvalid Choice");
+}
+
+}
+
+int addition(int a,int b){
+
+return a+b;
+
+
+}
+
+int sub(int e,int f){
+
+
+
+return e-f;
+
+}
+
+int mul(int h,int i){
+
+return h*i;
+
+}
+
+float div(float k,float l){
+
+return k/l;
 
 }
