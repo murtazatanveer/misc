@@ -4,52 +4,41 @@ int main(){
 
 //FINDING NUMBER US ARMSTRING OR NOT
 
-int number;
-
-int copy=number;
-
-int count=0;
-
-int copy_2=number;
-
-int digit,squ,sum=0;
-
-printf("\nEnter Number : ");
-
-scanf("%d",&number);
 
 
 
-while(number>0){
+    int number, copy, count = 0, digit, sum = 0;
 
-    number =number/10;
+    printf("Enter Number: ");
+    scanf("%d", &number);
 
-    count++;
+    copy = number; // Make a copy of the original number
 
-}
+    // Calculate the number of digits
+    while (copy > 0) {
+        copy = copy / 10;
+        count++;
+    }
 
-while(copy>0){
+    copy = number; // Reset copy to the original number
 
-digit=copy%10;
+    // Calculate the sum of digits raised to the power of the number of digits
+    while (copy > 0) {
+        digit = copy % 10;
+        sum = sum + pow(digit, count);
+        copy = copy / 10;
+    }
 
-squ = pow(digit,count);
+    if (sum == number) {
+        printf("%d is an Armstrong number\n", number);
+    } else {
+        printf("%d is not an Armstrong number\n", number);
+    }
 
-sum= sum + squ;
-
-}
-
-if(sum==copy_2){
-
-printf("\n\n%d is armstrong number",copy_2);
-
-}
-
-else{
-
-    printf("\n\n%d is not a armstrong number ",copy_2);
-
-
+    return 0;
 }
 
 
-}
+
+
+
