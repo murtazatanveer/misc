@@ -9,9 +9,9 @@ printf("\nEnter number you want to find palindrome : ");
 
 scanf("%d",&number);
 
-int z=reverse(number);
+// int z=;
 
-printf("\n\nreverse of %d is : %d",number,z);
+printf("\n\nreverse of %d is : %d",number,reverse(number));
 
 
 }
