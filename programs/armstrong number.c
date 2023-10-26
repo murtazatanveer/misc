@@ -5,24 +5,20 @@ int main(){
 //FINDING NUMBER US ARMSTRING OR NOT
 
 
-
-
     int number, copy, count = 0, digit, sum = 0;
 
     printf("Enter Number: ");
     scanf("%d", &number);
 
-    copy = number; // Make a copy of the original number
+    copy = number; 
 
-    // Calculate the number of digits
     while (copy > 0) {
         copy = copy / 10;
         count++;
     }
 
-    copy = number; // Reset copy to the original number
+    copy = number;
 
-    // Calculate the sum of digits raised to the power of the number of digits
     while (copy > 0) {
         digit = copy % 10;
         sum = sum + pow(digit, count);
